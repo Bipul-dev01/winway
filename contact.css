@@ -1,0 +1,72 @@
+.contactPage .title::after{
+     content: "Get in Touch";
+}
+.contactPage{
+  text-align: center;
+  padding: 80px 40px;
+  margin-bottom: 20px;
+}
+.contactPage .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  overflow: visible;
+}
+.contactPage .row .image{
+  width: 40%;
+}
+.contactPage .row .image img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.contactPage h1{
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: 600;
+  color: blue;
+}
+
+.row .image img{
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  
+  .contactPage .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactPage .row .image,
+  .contactPage .row .map {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactPage .row .image img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    position: static; /* left/right ব্যবহার করো না */
+  }
+
+  .contactPage .row .map iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width:460px){
+  .contactPage{
+    padding: 70px 10px;
+    margin-bottom: 20px;
+  }
+} 
