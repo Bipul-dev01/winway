@@ -604,6 +604,100 @@ li {
 }
 
 
+
+.product-gallery {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  font-family: "Noto Sans Bengali", "SolaimanLipi", sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #111;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.sub-title {
+  font-size: 26px;
+  color: #f57c00;
+  margin: 40px 0 30px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+.product-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding-bottom: 20px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; /* ✅ full image show */
+  background-color: #fff; /* Optional: white background */
+  display: block;
+  padding: 10px; /* little spacing around image */
+}
+
+.product-item h4 {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-item p {
+  font-size: 15px;
+  color: #666;
+  padding: 0 12px;
+  margin: 10px 0;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: 700;
+  color: #e53935;
+  font-size: 17px;
+}
+
+.product-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-item img {
+    height: 220px;
+  }
+}
+
+
+
+
 /* Video Gallery */
     #videoGallery {
       margin-top: 60px;
@@ -748,6 +842,95 @@ li {
         font-size: 28px;
       }
     }
+
+/* Only affect this section */
+  .features-section {
+    font-family: "Noto Sans Bengali", "SolaimanLipi", sans-serif;
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff5e1, #ffe0cc);
+  }
+
+  .features-section h2 {
+    font-size: 34px;
+    color: #d35400;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 2px #999;
+  }
+
+  .features-section .sub-title {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #f5a623;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .features-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+  }
+
+  .features-section .feature-item {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .features-section .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  }
+
+  .features-section .feature-item span {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .features-section .feature-item p {
+    font-size: 17px;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Accent colors */
+  .features-section .feature-item:nth-child(1) span {color: #27ae60;}
+  .features-section .feature-item:nth-child(2) span {color: #3498db;}
+  .features-section .feature-item:nth-child(3) span {color: #f39c12;}
+  .features-section .feature-item:nth-child(4) span {color: #9b59b6;}
+  .features-section .feature-item:nth-child(5) span {color: #e67e22;}
+  .features-section .feature-item:nth-child(6) span {color: #e74c3c;}
+  .features-section .feature-item:nth-child(7) span {color: #2ecc71;}
+  .features-section .feature-item:nth-child(8) span {color: #16a085;}
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .features-section .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .features-section {
+      padding: 50px 15px;
+    }
+    .features-section h2 {
+      font-size: 28px;
+    }
+  }
+
+
 
 
 /* Features Section Start  */
