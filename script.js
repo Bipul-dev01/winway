@@ -10,6 +10,24 @@ function loaderAnimation() {
 loaderAnimation()
 
 
+// Video Gallery Script Code Start
+const videoList = document.querySelectorAll('.video-list .vid');
+    const mainFrame = document.getElementById('mainVideoFrame');
+    const mainTitle = document.getElementById('mainVideoTitle');
+
+    videoList.forEach(vid => {
+      vid.addEventListener('click', () => {
+        // active class remove from all
+        videoList.forEach(item => item.classList.remove('active'));
+        vid.classList.add('active');
+
+        // change main video and title
+        mainFrame.src = vid.getAttribute('data-src');
+        mainTitle.textContent = vid.getAttribute('data-title');
+      });
+    });
+// Video Gallery Script Code End
+
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
