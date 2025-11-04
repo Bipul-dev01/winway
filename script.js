@@ -1,13 +1,16 @@
-// Preloader
+// ===== Preloader Start
 
 function loaderAnimation() {
-    var loader = document.querySelector("#loading")
-    setTimeout(function () {
-        loader.style.top = "-100%"
-    }, 2200)
+  var loader = document.querySelector("#loading");
+  setTimeout(function () {
+    loader.style.top = "-100%";
+  }, 2500);
 }
 
-loaderAnimation()
+loaderAnimation();
+
+// ===== Preloader End
+
 
 
 // Video Gallery Script Code Start
@@ -28,6 +31,10 @@ const videoList = document.querySelectorAll('.video-list .vid');
     });
 // Video Gallery Script Code End
 
+
+
+
+
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
@@ -36,6 +43,7 @@ $(document).ready(function(){
         }else{
             $('.navbar').removeClass("sticky");
         }
+
          // scroll-up button show/hide script
          if(this.scrollY>500){
             $('.scroll-up-btn').addClass("show");
