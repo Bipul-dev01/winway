@@ -106,6 +106,45 @@ $(document).ready(function(){
     });
 });
 
+
+
+
+
+
+
+// Generate 50 random particles
+const particleContainer = document.querySelector(".particles");
+const particleCount = 50;
+
+for(let i=0; i<particleCount; i++){
+    const span = document.createElement("span");
+
+    // Random size between 5px to 15px
+    const size = Math.random() * 10 + 5;
+    span.style.width = `${size}px`;
+    span.style.height = `${size}px`;
+
+    // Random horizontal position
+    span.style.left = `${Math.random() * 100}%`;
+
+    // Random animation duration
+    const duration = Math.random() * 15 + 10; // 10s to 25s
+    span.style.animationDuration = `${duration}s`;
+
+    // Random background color & glow
+    const hue = Math.floor(Math.random() * 360);
+    span.style.background = `hsl(${hue}, 80%, 60%)`;
+    span.style.boxShadow = `0 0 ${size}px hsl(${hue}, 80%, 60%)`;
+
+    particleContainer.appendChild(span);
+}
+
+
+
+
+
+
+
 /* **********************************************************
     Slide/Carousel Section JS Code
 ********************************************************** */
