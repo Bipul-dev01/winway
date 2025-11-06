@@ -140,6 +140,16 @@ html {
 
 /* ===== scroll-up-btn End ===== */
 
+/* ===== This code for Navbar, Sponsor & Testimonials Section Start ===== */
+ 
+section .max-width {
+  padding: 80px 80px;
+}
+
+/* ===== This code for Navbar, Sponsor & Testimonials Section End ===== */
+
+
+
 /* ===== Navbar Start =====  */
 
 .navbar .max-width {
@@ -1665,10 +1675,19 @@ html {
   flex: 1.2 1 calc(30% - 30px); /* a bit wider */
 }
 
+.footer-col.first-col{
+  padding-left: 60px;
+}
+.footer-col.third-col {
+  margin-left: -100px !important;
+}
+
 /* Other columns */
 .footer-col:not(.contact-info) {
   flex: 1 1 calc(23% - 30px);
 }
+
+
 
 /* Footer Logo */
 .logo-img {
@@ -1823,6 +1842,12 @@ html {
   .footer-col.contact-info {
     flex: 1 1 calc(50% - 30px); /* 2 columns */
   }
+  .footer-col.first-col{
+    padding-left: 0px;
+  }
+  .footer-col.third-col {
+    margin-left: -0px !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1880,27 +1905,9 @@ html {
 
 /* ===== WhatsApp Floating Button End */
 
-/* **********************************************************
-    All similar content Styling code
-********************************************************** */
- section .max-width {
-  padding: 80px 80px;
-}
-.about,
-.services,
-.teams,
-.contact,
-footer {
-  font-family: "Poppins", sans-serif;
-}
-.about .about-content,
-.services .serve-content,
-.contact .contact-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+
+/* ===== Stylyling Title for Testimonials & contactPage Start =====  */
+
 section .title {
   position: relative;
   text-align: center;
@@ -1939,7 +1946,7 @@ section .title::after {
   }
 } 
 
-
+/* ===== Stylyling Title for Testimonials & contactPage End =====  */
 
 
 

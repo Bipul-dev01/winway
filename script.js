@@ -13,7 +13,7 @@ loaderAnimation();
 
 
 
-// Video Gallery Script Code Start
+// ===== Video Gallery Script Code Start
 const videoList = document.querySelectorAll('.video-list .vid');
     const mainFrame = document.getElementById('mainVideoFrame');
     const mainTitle = document.getElementById('mainVideoTitle');
@@ -29,7 +29,7 @@ const videoList = document.querySelectorAll('.video-list .vid');
         mainTitle.textContent = vid.getAttribute('data-title');
       });
     });
-// Video Gallery Script Code End
+// ===== Video Gallery Script Code End
 
 
 
@@ -75,35 +75,6 @@ $(document).ready(function(){
         loop: true
     });
 
-     var typed = new Typed(".typing-2", {
-        strings: ["Entrepreneur", "Humanitarian", "Nature - lover", "Green activist"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
-        }
-    });
 });
 
 
