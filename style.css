@@ -777,14 +777,14 @@ section .max-width {
 }
 
 .supported-by .logo-box {
-  width: 140px;    /* smaller */
-  height: 90px;    /* smaller */
+  width: 140px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  padding: 5px;    /* light padding */
+  padding: 5px;
   transition: transform 0.3s;
 }
 
@@ -799,7 +799,7 @@ section .max-width {
   transform: scale(1.05);
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 992px) {
   .supported-by .logo-box {
     width: 120px;
@@ -808,14 +808,22 @@ section .max-width {
   }
 }
 
+/* 📱 Mobile (2-column grid) */
 @media (max-width: 600px) {
   .supported-by .title {
     font-size: 30px;
   }
 
+  .supported-by .logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 25px;
+  }
+
   .supported-by .logo-box {
-    width: 100px;
-    height: 70px;
+    width: 120px;
+    height: 75px;
     padding: 3px;
   }
 }
@@ -825,96 +833,183 @@ section .max-width {
 
 /* ===== Counting Number Section Start ===== */
 
-.counters{
-    padding: 4em 2em;
-    color: #fff;
-    text-align: center;
+.counters {
+  padding: 4em 2em;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("./img/counter/green_world.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.counters > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Large screen: 5 items in one row */
+  gap: 3em 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  position: relative;
+  animation: fadeUp 600ms ease-in-out forwards;
+}
+
+.counter img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+}
+
+.white-icon {
+  filter: brightness(0) invert(1); 
+}
+
+.counter h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 0.2em;
+  color: #f9ff54;
+}
+
+.counter p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.counters-2 .counter:not(:last-child)::before {
+  content: "";
+  background: #df4444;
+  position: absolute;
+  width: 2px;
+  height: 3em;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1em;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet (medium screen) */
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .counters > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .counters-2 .counter:not(:last-child)::before {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+  .counters {
     margin-top: 20px;
-    margin-bottom: 40px;
-    /* background-image: url(./images/substation/Substation1.jpg); */
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("./img/counter/green_world.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.counters > div{
-    max-width: 1000px ;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4em 2em;
-}
-.counter{
-    position: relative;
-    animation: fadeUp 600ms ease-in-out forwards;
-}
-.counter h1{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    margin-bottom: 0.2em;
-}
-.counter p{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-}
-.counter img{
-    width: 65px;
-    height: 65px;
-}
-.counters-2 h1{
-    color: #f9ff54;
-}
-.counters-2 .counter:not(:last-child)::before{
-    content: "";
-    background: #df4444;
-    position: absolute;
-    width: 2px;
-    height: 3em;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -1em;
-}
-@keyframes fadeUp{
-  0%{
-      opacity: 0;
-      transform: translateY(150px);
   }
-  100%{
-      opacity: 1;
-      transform: translateY(0);
+  .counters > div {
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
+  .counters-2 .counter:not(:last-child)::before {
+    width: 90%;
+    height: 2px;
+    top: initial;
+    right: initial;
+    bottom: -3em;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-@media screen and (max-width : 900px) and (min-width : 501px){
-    .counters > div {
-        grid-template-columns: 1fr 1fr;
-    }
-    .counters-2 .counter:not(:last-child)::before{
-        display: none;
-    }
-}
-@media screen and (max-width : 500px){
-    .counters{
-        margin-top: 20px;
-    }
-    .counters > div{
-        grid-template-columns: 1fr;
-        gap: 5em;
-    }
-    .counters-2 .counter:not(:last-child)::before{
-        width: 90%;
-        height: 2px;
-        top: initial;
-        right: initial;
-        bottom: -3em;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
+
 
 /* ===== Counting Number Section End ===== */
 
+/* ===== উইনওয়ে চুলার অনন্য বৈশিষ্ট্য Start */
+
+.awareness-section {
+  background: linear-gradient(135deg, #0d3b2e, #097a63);
+  color: #fff;
+  padding: 60px 10%;
+  font-family: "Poppins", sans-serif;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.awareness-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  border-left: 5px solid #00ffb3;
+  padding-left: 10px;
+}
+
+.awareness-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.awareness-section ul li {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+  padding: 12px 18px 12px 45px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.awareness-section ul li::before {
+  content: "⭐";
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-size: 18px;
+  color: #ffd700;
+  text-shadow: 0 0 6px #ffde70;
+}
+
+.awareness-section ul li:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+  .awareness-section {
+    padding: 40px 6%;
+  }
+  .awareness-section h2 {
+    text-align: center;
+  }
+}
+
+/* ===== উইনওয়ে চুলার অনন্য বৈশিষ্ট্য End */
 
 /* ===== উইনওয়ে কর্পোরেশনের পণ্যসমূহ Start ===== */
 
@@ -937,7 +1032,7 @@ section .max-width {
   color: #f57c00;
   margin: 40px 0 30px;
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .product-grid {
@@ -1381,6 +1476,7 @@ section .max-width {
 .teams .title::after {
   content: "Opinions";
 }
+
 .teams .carousel .card {
   background: #222;
   border-radius: 6px;
@@ -1437,28 +1533,79 @@ section .max-width {
   margin-top: 10px;
 }
 /* 🔹 Responsive size for mobile screens */
+/* For mobile screens */
 @media (max-width: 768px) {
+  .teams .carousel .card {
+    width: 90% !important; /* একটু বড় রাখো */
+    margin: 0 auto; /* কেন্দ্রস্থ করবে */
+    padding: 25px 25px;
+  }
   .teams .quote-icon {
-    font-size: 28px; /* smaller for tablets & mobiles */
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .teams .testimonial-text {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .teams .max-width {
+    width: 100%;
+    padding: 60px 15px;
+  }
+  .teams .carousel .card {
+    width: 95% !important; /* আরও সামান্য বড় */
+    padding: 20px 20px;
+  }
+  .teams .quote-icon {
+    font-size: 24px;
+  }
+  .teams .testimonial-text {
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* @media (max-width: 768px) {
+   .teams .carousel .card {
+    width: 100%;
+    padding: 25px 35px;
+  
+  }
+  .teams .quote-icon {
+    font-size: 28px; 
     margin-bottom: 8px;
   }
 
   .teams .testimonial-text {
     font-size: 15px;
     line-height: 1.5;
-    padding: 0 10px; /* add little spacing for narrow screens */
+    padding: 0 10px; 
   }
 }
 
 @media (max-width: 480px) {
+  .teams .max-width{
+    width: 100%;
+    padding: 80px 30px;
+  }
+  .teams .carousel .card{
+    width: 100%;
+  }
   .teams .quote-icon {
-    font-size: 24px; /* even smaller on small phones */
+    font-size: 24px; 
   }
 
   .teams .testimonial-text {
     font-size: 14px;
   }
-}
+} */
 
 /* ===== Testimonials section End ===== */
 
