@@ -116,28 +116,49 @@ html {
 
 .scroll-up-btn {
   position: fixed;
+  bottom: 28px;
+  right: 25px;
   height: 45px;
-  width: 42px;
-  background: crimson;
-  right: 30px;
-  bottom: 10px;
-  text-align: center;
-  line-height: 45px;
-  color: #fff;
-  z-index: 999;
-  font-size: 30px;
-  border-radius: 6px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  color: #ff0048;
+  font-size: 22px;
   cursor: pointer;
+  transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease;
+  z-index: 999;
 }
+
+.scroll-up-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(145deg, #ff0048, #ff5f87);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(255, 0, 72, 0.4);
+}
+
 .scroll-up-btn.show {
-  bottom: 30px;
   opacity: 1;
   pointer-events: auto;
 }
 
+@media (max-width: 768px) {
+  .scroll-up-btn {
+    height: 45px;
+    width: 45px;
+    bottom: 27px !important;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
 /* ===== scroll-up-btn End ===== */
 
 /* ===== This code for Navbar, Sponsor & Testimonials Section Start ===== */
@@ -162,8 +183,8 @@ section .max-width {
   gap: 15px;
 }
 .max-width img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
 
@@ -834,6 +855,96 @@ section .max-width {
 }
 
 /* ===== About section Managing Director End ===== */
+
+
+/* ===== More About Start ===== */
+.about-winway {
+  background: linear-gradient(135deg, #fff7e6, #f3e7d6);
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 50px auto 40px;
+  width: 90%;
+  max-width: 900px;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-winway:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-winway h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-winway h2 span {
+  color: #ff5e00;
+}
+
+.about-winway p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ff5e00;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.pdf-btn i:first-child {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.pdf-btn i:last-child {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.pdf-btn:hover {
+  background: #ff7620;
+  box-shadow: 0 6px 15px rgba(255, 94, 0, 0.4);
+}
+
+.pdf-btn:hover i:last-child {
+  transform: translateX(6px);
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 480px) {
+  .about-winway h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-winway p {
+    font-size: 1rem;
+  }
+
+  .pdf-btn {
+    font-size: 1rem;
+    padding: 12px 22px;
+  }
+}
+
+/* ===== More About End ===== */
+
 
 /* ===== Sponsor By Section Start ===== */
 

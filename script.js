@@ -32,7 +32,22 @@ const videoList = document.querySelectorAll('.video-list .vid');
     });
 // ===== Video Gallery Script Code End
 
+// ===== scroll-up-btn Start =====
+$(document).ready(function(){
+  $(window).scroll(function(){
+    if(this.scrollY > 500){
+      $('.scroll-up-btn').addClass("show");
+    } else {
+      $('.scroll-up-btn').removeClass("show");
+    }
+  });
 
+  $('.scroll-up-btn').click(function(){
+    $('html').animate({scrollTop: 0});
+  });
+});
+
+// ===== scroll-up-btn End =====
 
 
 
@@ -44,20 +59,6 @@ $(document).ready(function(){
         }else{
             $('.navbar').removeClass("sticky");
         }
-
-         // scroll-up button show/hide script
-         if(this.scrollY>500){
-            $('.scroll-up-btn').addClass("show");
-         }else{
-            $('.scroll-up-btn').removeClass("show");
-         }
-    });
-    
-    // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
-        $('html').css("scrollBehavior", "auto");
     });
 
     // toggle menu/navbar script
