@@ -141,14 +141,12 @@ html {
 /* ===== scroll-up-btn End ===== */
 
 /* ===== This code for Navbar, Sponsor & Testimonials Section Start ===== */
- 
+
 section .max-width {
   padding: 80px 80px;
 }
 
 /* ===== This code for Navbar, Sponsor & Testimonials Section End ===== */
-
-
 
 /* ===== Navbar Start =====  */
 
@@ -236,7 +234,6 @@ section .max-width {
     background-size: 400% 400%;
     animation: gradientMove 8s ease infinite;
 
-
     background-size: cover;
     object-fit: cover;
     height: 100%;
@@ -246,18 +243,17 @@ section .max-width {
   }
 
   /* 🔄 Animation Keyframes */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 
   .navbar .menu::after {
     content: "";
@@ -310,7 +306,6 @@ section .max-width {
   }
 }
 
-
 .menu-btn {
   color: #fff;
   font-size: 35px;
@@ -318,7 +313,7 @@ section .max-width {
   cursor: pointer;
   display: none;
 }
-@media (max-width: 947px){
+@media (max-width: 947px) {
   .menu-btn {
     display: block;
     z-index: 999;
@@ -337,7 +332,7 @@ section .max-width {
   align-items: center;
   height: 80vh;
   min-height: 500px;
-  background:	#1C6331;
+  background: #1c6331;
   /* background: linear-gradient(135deg, #06402b, #11998e, #38ef7d); */
   color: #fff;
   text-align: left;
@@ -353,21 +348,60 @@ section .max-width {
   max-width: 700px;
 }
 
-.home-content .text-1 { font-family: "Montserrat", sans-serif; font-size: 28px; font-weight: 500; color: #e0ffe0; margin-bottom: 10px; margin-top: 100px; }
-.home-content .text-2 { font-family: "Playfair Display", serif; font-size: 65px; font-weight: 800; margin-bottom: 15px; line-height: 1.1; padding: 10px 0; }
-.home-content .text-2A { font-family: "Montserrat", sans-serif; font-size: 28px; font-weight: 600; color: #d4f1d4; margin-bottom: 20px; }
-.home-content .text-3 { font-family: "Montserrat", sans-serif; font-size: 22px; margin-bottom: 30px; }
-.home-content .text-3 span { color: #fff; font-weight: 500; }
-.home-content a { display: inline-block; background: #26065b; padding: 12px 28px; color: #fff; font-size: 22px; border-radius: 6px; text-decoration: none; transition: all 0.3s ease; }
-.home-content a:hover { background: #1b043f; color: #fff; }
+.home-content .text-1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #e0ffe0;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
+.home-content .text-2 {
+  font-family: "Playfair Display", serif;
+  font-size: 65px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.1;
+  padding: 10px 0;
+}
+.home-content .text-2A {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #d4f1d4;
+  margin-bottom: 20px;
+}
+.home-content .text-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.home-content .text-3 span {
+  color: #fff;
+  font-weight: 500;
+}
+.home-content a {
+  display: inline-block;
+  background: #26065b;
+  padding: 12px 28px;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.home-content a:hover {
+  background: #1b043f;
+  color: #fff;
+}
 
 /* Particle container */
 .particles {
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   overflow: hidden;
 }
@@ -383,39 +417,83 @@ section .max-width {
 
 /* Floating + rotating animation */
 @keyframes floatParticle {
-  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-  25% { opacity: 0.8; }
-  50% { transform: translateY(50vh) rotate(180deg); opacity: 1; }
-  75% { opacity: 0.8; }
-  100% { transform: translateY(-50vh) rotate(360deg); opacity: 0; }
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-50vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* Responsive text */
-@media (max-width: 1200px){
-  .home { text-align: center; padding: 0 30px; }
-  .home-content .text-2 { font-size: 55px; }
-  .home-content .text-2A { font-size: 24px; }
+@media (max-width: 1200px) {
+  .home {
+    text-align: center;
+    padding: 0 30px;
+  }
+  .home-content .text-2 {
+    font-size: 55px;
+  }
+  .home-content .text-2A {
+    font-size: 24px;
+  }
 }
-@media (max-width: 768px){
-  .home { height: auto; padding: 80px 20px; text-align: center; }
-  .home-content .text-2 { font-size: 45px; }
-  .home-content .text-2A { font-size: 20px; }
-  .home-content .text-3 { font-size: 18px; }
-  .home-content a { font-size: 18px; padding: 10px 24px; }
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .home-content .text-2 {
+    font-size: 45px;
+  }
+  .home-content .text-2A {
+    font-size: 20px;
+  }
+  .home-content .text-3 {
+    font-size: 18px;
+  }
+  .home-content a {
+    font-size: 18px;
+    padding: 10px 24px;
+  }
 }
-@media (max-width: 500px){
-  .home-content .text-2 { font-size: 35px; }
-  .home-content .text-2A { font-size: 18px; }
-  .home-content .text-3 { font-size: 16px; }
-  .home-content a { font-size: 16px; padding: 8px 20px; }
+@media (max-width: 500px) {
+  .home{
+    margin-bottom: 20px;
+  }
+  .home-content .text-2 {
+    font-size: 35px;
+  }
+  .home-content .text-2A {
+    font-size: 18px;
+  }
+  .home-content .text-3 {
+    font-size: 16px;
+  }
+  .home-content a {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
 }
 
 /* ===== Home / Hero Section End ===== */
 
-
 /* ===== Moving Text Styling Start ===== */
 
-.movingContainer{
+.movingContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -426,21 +504,23 @@ section .max-width {
   text-align: center;
   display: block;
 }
-.movingTitle h1{
-  font-size: 35px;
+.movingTitle h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 30px;
   font-weight: 600;
-  color: rgb(222, 185, 3);
+  color: rgb(201, 171, 19);
   display: inline-block;
   margin-top: 40px;
 }
-
 
 .moving {
   min-height: 20vh;
   /* margin-top: 30px; */
   margin-bottom: 20px;
   width: 100%;
-  background-color: #f5f4f2;
+  background-color: #ffffff;
+  /* background-color: #f5f4f2; */
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -460,6 +540,10 @@ section .max-width {
   animation-duration: 55s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.moving-text:hover .con {
+  animation-play-state: paused;
 }
 .moving-text h1 {
   font-size: 5vw;
@@ -492,6 +576,16 @@ section .max-width {
     display: flex;
     align-items: center; /* centers vertically */
   }
+  .movingTitle h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 40px;
+  }
+  .movingTitle:nth-child(1) h1{
+    margin-top: 10px;
+  }
   .moving-text {
     overflow-x: auto;
     white-space: nowrap;
@@ -509,7 +603,6 @@ section .max-width {
     vertical-align: middle;
   }
 }
-
 /* ===== Moving Text Styling End ===== */
 
 /* ===== Sliding Carousel Start ===== */
@@ -611,10 +704,9 @@ section .max-width {
   }
   .mySlides img {
     height: 26vh;
-  } 
-} 
+  }
+}
 /* ===== Sliding Carousel End ===== */
-
 
 /* ===== About section Managing Director Start ===== */
 
@@ -744,7 +836,7 @@ section .max-width {
 /* ===== About section Managing Director End ===== */
 
 /* ===== Sponsor By Section Start ===== */
-    
+
 .supported-by {
   padding: 30px 0;
   background: linear-gradient(135deg, #f0f0f0, #ffffff);
@@ -754,13 +846,13 @@ section .max-width {
 .supported-by .title {
   font-size: 40px;
   font-weight: 700;
-  color: #26065B;
+  color: #26065b;
   margin-bottom: 60px;
   position: relative;
 }
 
 .supported-by .title::after {
-  content: '';
+  content: "";
   width: 100px;
   height: 4px;
   background: crimson;
@@ -831,7 +923,6 @@ section .max-width {
 
 /* ===== Sponsor By Section End ===== */
 
-
 /* ===== Counting Number Section Start ===== */
 
 .counters {
@@ -840,7 +931,8 @@ section .max-width {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("./img/counter/green_world.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/counter/green_world.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -868,7 +960,7 @@ section .max-width {
 }
 
 .white-icon {
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 
 .counter h1 {
@@ -936,7 +1028,6 @@ section .max-width {
     transform: translateX(-50%);
   }
 }
-
 
 /* ===== Counting Number Section End ===== */
 
@@ -1012,6 +1103,7 @@ section .max-width {
 
 /* ===== উইনওয়ে চুলার অনন্য বৈশিষ্ট্য End */
 
+/* ===== Stove Specification Start ===== */
 
 .image-showcase {
   width: 100%;
@@ -1095,10 +1187,7 @@ section .max-width {
   }
 }
 
-
-
-
-
+/* ===== Stove Specification End ===== */
 
 /* ===== উইনওয়ে কর্পোরেশনের পণ্যসমূহ Start ===== */
 
@@ -1342,7 +1431,6 @@ section .max-width {
 
 /* ===== Video Gallery Section End ===== */
 
-
 /* ===== Features-section Start ===== */
 
 .features-section {
@@ -1449,116 +1537,122 @@ section .max-width {
 
 /* ===== Features-section End ===== */
 
-
 /* ===== Vision & Objectives 🌟 Start ===== */
 
 .vision-section {
-    font-family: "Noto Sans Bengali", "SolaimanLipi", sans-serif;
-    background: linear-gradient(135deg, #fff8e1, #ffe0cc);
-    padding: 90px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+  font-family: "Noto Sans Bengali", "SolaimanLipi", sans-serif;
+  background: linear-gradient(135deg, #fff8e1, #ffe0cc);
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-  .vision-section::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(255,204,128,0.6), transparent 70%);
-    animation: float 6s infinite ease-in-out;
-  }
+.vision-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 204, 128, 0.6),
+    transparent 70%
+  );
+  animation: float 6s infinite ease-in-out;
+}
 
-  .vision-section::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    right: -60px;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(255,183,77,0.5), transparent 70%);
-    animation: float 8s infinite ease-in-out reverse;
-  }
+.vision-section::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 183, 77, 0.5), transparent 70%);
+  animation: float 8s infinite ease-in-out reverse;
+}
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-
-  .vision-section h2 {
-    font-size: 36px;
-    color: #d35400;
-    font-weight: 800;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    margin-bottom: 60px;
+  50% {
+    transform: translateY(-20px);
   }
+}
 
+.vision-section h2 {
+  font-size: 36px;
+  color: #d35400;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+}
+
+.vision-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.vision-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vision-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.vision-box h3 {
+  font-size: 28px;
+  color: #e67e22;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.vision-box h3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background: #f39c12;
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.vision-box p {
+  font-size: 17px;
+  color: #2c3e50;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .vision-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: 1fr;
   }
-
-  .vision-box {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    padding: 40px 30px;
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+  .vision-section {
+    padding: 60px 15px;
   }
-
-  .vision-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  .vision-section h2 {
+    font-size: 30px;
   }
-
-  .vision-box h3 {
-    font-size: 28px;
-    color: #e67e22;
-    margin-bottom: 20px;
-    position: relative;
-  }
-
-  .vision-box h3::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 4px;
-    background: #f39c12;
-    bottom: -8px;
-    left: 0;
-    border-radius: 2px;
-  }
-
-  .vision-box p {
-    font-size: 17px;
-    color: #2c3e50;
-    line-height: 1.7;
-    text-align: justify;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .vision-container {
-      grid-template-columns: 1fr;
-    }
-    .vision-section {
-      padding: 60px 15px;
-    }
-    .vision-section h2 {
-      font-size: 30px;
-    }
-  }
+}
 
 /* ===== Vision & Objectives 🌟 End ===== */
-
-
 
 /* ===== Testimonials section Start ===== */
 
@@ -1660,7 +1754,6 @@ section .max-width {
 
 /* ===== Testimonials section End ===== */
 
-
 /* ===== Achievements & Success Stories Start ===== */
 
 .achievements-section {
@@ -1675,7 +1768,7 @@ section .max-width {
   margin-bottom: 60px;
   color: #d35400;
   font-weight: 800;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .achievements-timeline {
@@ -1749,17 +1842,16 @@ section .max-width {
 
 /* ===== Contact Section Start ===== */
 
-    @media (max-width: 500px) {
-      #contactUs {
-          margin-top: 40px;
-      }
-    }
+@media (max-width: 500px) {
+  #contactUs {
+    margin-top: 40px;
+  }
+}
 
 /* ===== Contact Section End ===== */
 
-
 /* ===== যোগাযোগের ঠিকানা Section Start ===== */
-      /* যোগাযোগের ঠিকানা Section Styles */
+/* যোগাযোগের ঠিকানা Section Styles */
 .address-section {
   background-color: #111;
   color: #f1f1f1;
@@ -1827,10 +1919,8 @@ section .max-width {
 }
 /* ===== যোগাযোগের ঠিকানা Section End ===== */
 
-
-
 /* ===== Form Contact Us Page Start ===== */
-      .contact-section {
+.contact-section {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -1981,9 +2071,7 @@ section .max-width {
   }
 }
 
-
 /* ===== Form Contact Us Page End ===== */
-
 
 /* ===== Footer section Start ===== */
 
@@ -2017,7 +2105,7 @@ section .max-width {
   flex: 1.2 1 calc(30% - 30px); /* a bit wider */
 }
 
-.footer-col.first-col{
+.footer-col.first-col {
   padding-left: 60px;
 }
 .footer-col.third-col {
@@ -2028,8 +2116,6 @@ section .max-width {
 .footer-col:not(.contact-info) {
   flex: 1 1 calc(23% - 30px);
 }
-
-
 
 /* Footer Logo */
 .logo-img {
@@ -2184,7 +2270,7 @@ section .max-width {
   .footer-col.contact-info {
     flex: 1 1 calc(50% - 30px); /* 2 columns */
   }
-  .footer-col.first-col{
+  .footer-col.first-col {
     padding-left: 0px;
   }
   .footer-col.third-col {
@@ -2244,9 +2330,7 @@ section .max-width {
   background-color: #1ebe5d;
 }
 
-
 /* ===== WhatsApp Floating Button End */
-
 
 /* ===== Stylyling Title for Common (Testimonials & contactPage) Start =====  */
 
@@ -2286,9 +2370,6 @@ section .title::after {
   section .title::after {
     font-size: 16px;
   }
-} 
+}
 
 /* ===== Stylyling Title for Common (Testimonials & contactPage) End =====  */
-
-
-
