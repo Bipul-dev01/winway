@@ -956,6 +956,80 @@ section .max-width {
   }
 }
 
+
+/* ===== Certificate Section ===== */
+
+.certificate-section {
+  margin-top: 40px;
+}
+
+.certificate-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.certificate-card {
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.certificate-card h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.certificate-card a {
+  display: inline-block;
+  background: #ff5e00;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.certificate-card a:hover {
+  background: #ff7620;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .certificate-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== More About End ===== */
 
 
